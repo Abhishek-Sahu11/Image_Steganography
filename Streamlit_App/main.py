@@ -1,9 +1,12 @@
+import sys
+import os
 import streamlit as st
 from Steganography_Logic.least_significant_bit import encode, decode
 from Steganography_Logic.filetobyte_conversion import file_to_bytes, bytes_to_file
 from Steganography_Logic.validators_check import max_capacity, check_capacity
 from Streamlit_UI import upload_image, upload_file
 from io import BytesIO
+
 
 st.title("🐺 Image Steganography App")
 st.write("Hide text or files inside images, and extract them back.")
