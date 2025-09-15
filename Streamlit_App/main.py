@@ -7,6 +7,8 @@ from Steganography_Logic.validators_check import max_capacity, check_capacity
 from Streamlit_UI import upload_image, upload_file
 from io import BytesIO
 
+# Add repo root to Python path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 st.title("🐺 Image Steganography App")
 st.write("Hide text or files inside images, and extract them back.")
