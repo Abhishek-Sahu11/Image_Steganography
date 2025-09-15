@@ -37,7 +37,6 @@ def decode(stego_Image: Image.Image) -> bytes:
     bit_string = ''.join(bits)
 
     #bytearray() = represent array of int in range 0 to 255
-    #
     data = bytearray()
     for i in range(0, len(bit_string), 8):
         byte = bit_string[i:i+8]
