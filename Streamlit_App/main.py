@@ -1,8 +1,10 @@
 import sys
 import os
 
-# Add repo root to Python path
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+# Add repo root to Python path (must be first!)
+repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+if repo_root not in sys.path:
+    sys.path.insert(0, repo_root)
 
 import streamlit as st
 from Steganography_Logic.least_significant_bit import encode, decode
