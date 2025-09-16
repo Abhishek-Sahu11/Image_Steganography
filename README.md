@@ -52,6 +52,9 @@ Image_Steganography/
 
      streamlit run app/main.py (without venv)
      python -m streamlit run Streamlit_App/main.py (with venv)
+     or
+     # main.py and Streamlit_UI.py has been kept out of the folder due to deployment issues 
+     python -m streamit run main.py (With venv)
 
 
 ## 📸 Usage
