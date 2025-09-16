@@ -20,7 +20,7 @@ Image_Steganography/
 │ ├── validators_check.py # Capacity check utilities
 │ ├── crypto_security_layer.py # Encryption layer with Fernet
 │
-│── Streamlit_App/
+│
 │ ├── main.py # Streamlit entry point
 │
 │── Streamlit_UI.py # UI helpers (file/image uploaders)
