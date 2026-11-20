@@ -1,102 +1,100 @@
-## Image_Stegonography
+# Image Steganography
 
-A simple and interactive web app built with Streamlit that lets you hide and extract secret text, files, or images inside another image using the Least Significant Bit (LSB) technique.
+A simple and interactive web application built with Streamlit that allows users to hide and extract secret text messages, files, and images inside another image using the **Least Significant Bit (LSB)** technique.
 
 ## 🚀 Features
 
 - Hide **text messages** inside images.
-- Hide **any type of file** inside images (documents, executables, images, etc.).
-- Extract hidden content from stego images.
-- Download the encoded (stego) image with hidden data.
-- Supports multiple image formats: `PNG, JPG, JPEG, BMP`.
-- User-friendly **Streamlit UI** with tabs for encoding and decoding.
+- Hide **different types of files** inside images, including documents, executables, and images.
+- Extract hidden content from steganographic images.
+- Download the encoded (stego) image containing hidden data.
+- Supports multiple image formats: `PNG`, `JPG`, `JPEG`, and `BMP`.
+- User-friendly **Streamlit interface** with separate tabs for encoding and decoding.
+- Encryption layer using Fernet for additional data security.
 
 ## 📂 Project Structure
 
+```text
 Image_Steganography/
-│── Steganography_Logic/
-│ ├── least_significant_bit.py # Core LSB encode/decode functions
-│ ├── filetobyte_conversion.py # File ↔ bytes conversion helpers
-│ ├── validators_check.py # Capacity check utilities
-│ ├── crypto_security_layer.py # Encryption layer with Fernet
 │
+├── Steganography_Logic/
+│   ├── least_significant_bit.py
+│   ├── filetobyte_conversion.py
+│   ├── validators_check.py
+│   └── crypto_security_layer.py
 │
-│ ├── main.py # Streamlit entry point
-│
-│── Streamlit_UI.py # UI helpers (file/image uploaders)
-│── requirements.txt
-│── README.md
-
+├── main.py
+├── Streamlit_UI.py
+├── requirements.txt
+├── README.md
+└── LICENSE
+```
 
 ## 🛠️ Installation & Setup
 
-1. Clone the repository
-     ```bash
-     git clone https://github.com/<your-username>/Image_Steganography.git
-     cd Image_Steganography
+### 1. Clone the Repository
 
+```bash
+git clone https://github.com/Abhishek-Sahu11/Image_Steganography.git
 
-## Create a virtual environment (recommended)
+cd Image_Steganography
+```
 
-     python -m venv venv        # Use Python -m venv .venv (to hide venv file)
-     source venv/bin/activate   # On Linux/Mac
-     venv\Scripts\activate.bat     # On Windows
+### 2. Create a Virtual Environment (Recommended)
 
+```bash
+python -m venv .venv
+```
 
-## Install dependencies
+**Activate the virtual environment:**
 
-     pip install -r requirements.txt
+Windows:
+```bash
+.venv\Scripts\activate
+```
 
+Linux / macOS:
+```bash
+source .venv/bin/activate
+```
 
-## Run the app
+### 3. Install Dependencies
 
-     streamlit run app/main.py (without venv)
-     python -m streamlit run Streamlit_App/main.py (with venv)
-     or
-     # main.py and Streamlit_UI.py has been kept out of the folder due to deployment issues 
-     python -m streamit run main.py (With venv)
+```bash
+python -m pip install -r requirements.txt
+```
 
+### 4. Run the Application
+
+```bash
+python -m streamlit run main.py
+```
+
+Once executed, Streamlit will start the application and provide a local URL that you can open in your browser.
 
 ## 📸 Usage
 
-     🔐 Encode
+### 🔐 Encoding
 
-         Upload a cover image.
+1. Upload a cover image.
+2. Choose the data type (Text or File).
+3. Enter your secret message or upload a file.
+4. Click the **Encode** button.
+5. Download the generated stego image.
 
-         Choose Text or File as the data type.
+### 🔎 Decoding
 
-         Enter text / upload a file.
-
-         Click Encode.
-
-         Download the Stego Image.
-
-     🔎 Decode
-
-         Upload a stego image.
-
-         Click Decode.
-
-         Extracted data will be shown as text, image, or file.
-
+1. Upload the stego image.
+2. Click the **Decode** button.
+3. Extract the hidden content.
+4. View the extracted text or download the extracted file.
 
 ## 📌 Future Improvements
 
-      Support for audio/video steganography 🎵🎥
-
-      Add password-protected encoding/decoding 🔑
-
-      Export operation logs/reports 📄
-
-
+- Support for audio and video steganography.
+- Password-protected encoding and decoding.
+- Export operation logs and reports.
 
 ## 📜 License
 
-     This project is licensed under the MIT License – see the LICENSE
-
-
-
-
-
-
-
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
